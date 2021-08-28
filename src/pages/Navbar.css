@@ -1,0 +1,20 @@
+.navbar {
+  color: white;
+  padding: 2rem;
+  padding-left: 20rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0.50rem 0.25rem 0.5rem black;
+}
+
+.item {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
