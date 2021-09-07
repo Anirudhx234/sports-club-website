@@ -6,17 +6,16 @@ import Data from './data/SportsInfo.json';
 class SportsCommittees extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { sport: 0, divs: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"], p: 1 };
+        this.state = { sport: 0, divs: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven"] };
     }
 
 
     none = (i) => {
-        for (let u = 0; u < 9; u++) {
+        for (let u = 0; u < 11; u++) {
             document.getElementsByClassName("sport " + this.state.divs[u])[0].classList.add("none");
         }
 
         document.getElementsByClassName("info none")[0].classList.remove("none");
-        document.getElementsByClassName("title")[0].classList.add("none");
 
         document.getElementsByClassName("back")[0].classList.remove("none");
 
@@ -28,14 +27,12 @@ class SportsCommittees extends React.Component {
         }
 
         window.scrollTo(0, 0);
-
     }
 
     back = () => {
         document.getElementsByClassName("info")[0].classList.add("none");
-        document.getElementsByClassName("title")[0].classList.remove("none");
 
-        for (let u = 0; u < 9; u++) {
+        for (let u = 0; u < 11; u++) {
             document.getElementsByClassName("sport " + this.state.divs[u])[0].classList.remove("none");
         }
 
@@ -44,11 +41,11 @@ class SportsCommittees extends React.Component {
 
         document.getElementsByClassName("back")[0].classList.add("none");
 
-        window.scrollTo(0, 0);
+        document.getElementsByClassName("sport " + this.state.divs[this.state.sport - 1])[0].scrollIntoView();
     }
 
 
-    
+
 
     changeState1 = () => {
         this.setState({ sport: 1 });
@@ -86,11 +83,18 @@ class SportsCommittees extends React.Component {
         this.setState({ sport: 9 });
         this.none(9);
     }
+    changeState10 = () => {
+        this.setState({ sport: 10 });
+        this.none(10);
+    }
+    changeState11 = () => {
+        this.setState({ sport: 11 });
+        this.none(10);
+    }
 
     render() {
         return (
             < div id='sc-container' className="sc-container" >
-                <h1 className="title">Sports Committees!</h1>
                 <div className="break" />
                 <div className="sport one" onClick={this.changeState1}>{Data[1].sport}</div>
                 <div className="sport two" onClick={this.changeState2}>{Data[2].sport}</div>
@@ -103,38 +107,37 @@ class SportsCommittees extends React.Component {
                 <div className="sport seven" onClick={this.changeState7}>{Data[7].sport}</div>
                 <div className="sport eight" onClick={this.changeState8}>{Data[8].sport}</div>
                 <div className="sport nine" onClick={this.changeState9}>{Data[9].sport}</div>
+                <div className="break" />
+                <div className="sport ten" onClick={this.changeState10}>{Data[10].sport}</div>
+                <div className="sport eleven" onClick={this.changeState11}>{Data[11].sport}</div>
                 <div className="info none">
-                    <h1>{Data[this.state.sport].sport}</h1>
+                    <h1 className="csport">{Data[this.state.sport].sport}</h1>
                     <div className="chead">
-                        <div className="name">{Data[this.state.sport].chead1}</div>
-                        <div className="break" />
-                        <div className="description">{Data[this.state.sport].chead1_d}</div>
-                        <div className="break" />
-                        <img className="math" src={Data[this.state.sport].chead1_i} />
+                        <div className="namel">{Data[this.state.sport].chead1}
+                            <div className="description">{Data[this.state.sport].chead1_d}</div>
+                        </div>
+                        <img className="math" alt={Data[this.state.sport].chead1} src={Data[this.state.sport].chead1_i} />
                         <div className="break" />
                     </div>
                     <div className="chead">
-                        <div className="name">{Data[this.state.sport].chead2}</div>
-                        <div className="break" />
-                        <div className="description">{Data[this.state.sport].chead2_d}</div>
-                        <div className="break" />
-                        <img className="math" src={Data[this.state.sport].chead2_i} />
-                        <div className="break" />
-                    </div>
-                    <div className="chead">
-                        <div className="name">{Data[this.state.sport].chead3}</div>
-                        <div className="break" />
-                        <div className="description">{Data[this.state.sport].chead3_d}</div>
-                        <div className="break" />
-                        <img className="math" src={Data[this.state.sport].chead3_i} />
+                        <img className="math" alt={Data[this.state.sport].chead2} src={Data[this.state.sport].chead2_i} />
+                        <div className="namer">{Data[this.state.sport].chead2}
+                            <div className="description">{Data[this.state.sport].chead2_d}</div>
+                        </div>
                         <div className="break" />
                     </div>
                     <div className="chead">
-                        <div className="name">{Data[this.state.sport].chead4}</div>
+                        <div className="namel">{Data[this.state.sport].chead3}
+                            <div className="description">{Data[this.state.sport].chead3_d}</div>
+                        </div>
+                        <img className="math" alt={Data[this.state.sport].chead3} src={Data[this.state.sport].chead3_i} />
                         <div className="break" />
-                        <div className="description">{Data[this.state.sport].chead4_d}</div>
-                        <div className="break" />
-                        <img className="math" src={Data[this.state.sport].chead4_i} />
+                    </div>
+                    <div className="chead">
+                        <img className="math" alt={Data[this.state.sport].chead4} src={Data[this.state.sport].chead4_i} />
+                        <div className="namer">{Data[this.state.sport].chead4}
+                            <div className="description">{Data[this.state.sport].chead4_d}</div>
+                        </div>
                         <div className="break" />
                     </div>
                 </div>

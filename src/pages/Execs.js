@@ -28,16 +28,14 @@ class Execs extends React.Component {
                     <div className="exec" data-aos={"fade-left"} data-aos-once={"true"}>
                         <h2>Events Coordinator</h2>
                         <div className="description">
-                            <p>Description</p>
+                            <p>{Data[1].chead1_d}</p>
                         </div>
-                        <div className="template" />
+                        <img className="picture" src={Data[1].chead1_i} alt="Aadhunik Sundar" />
                         <div className="line" />
                     </div>
                     <div className="exec" data-aos={"fade-right"} data-aos-once={"true"}>
                         <h2>Business Coordinator</h2>
-                        <div className="picture" >
-                            <img className="image" src={Data[3].chead1_i} alt="Madhuran Selva"/>
-                        </div>
+                        <img className="picture" src={Data[3].chead1_i} alt="Madhuran Selva" />
                         <div className="description">
                             <p>{Data[3].chead1_d}</p>
                         </div>

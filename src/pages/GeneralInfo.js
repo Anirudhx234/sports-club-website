@@ -33,6 +33,8 @@ class GeneralInfo extends React.Component {
                 </div>
                 <h2>Contact Us!</h2>
                 <a href="mailto:TAMSSportsClub123@gmail.com">TAMSSportsClub123@gmail.com</a>
+                <h2>Acknowledgements</h2>
+                <div>Adheesh Kadiresan - Website Lead Development</div>
             </div>
         );
     }

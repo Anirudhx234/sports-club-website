@@ -2,28 +2,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 5rem;
-}
-
-.title {
-  margin-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .sport {
-  width: 20rem;
-  height: 10rem;
-  border-radius: 1rem;
+  width: 100%;
+  height: 30rem;
+  /*border-radius: 1rem;
   border: 5px solid #32557f;
-  margin: 1rem;
-  font-size: 2rem;
+  margin: 1rem;*/
+
+  font-size: 8rem;
+  font-weight: bold;
+
   color: rgb(241, 241, 241);
 
-  display: flex;
-  justify-content: center;
+  background-size: 100vw;
+  background-position: center;
 
-  background-size: 20rem;
+  border-bottom: 1rem solid white;
 
   cursor: pointer;
+
+  transition: 0.3s;
+
+  box-sizing: border-box;
+  padding: 3rem;
+}
+
+.sport:hover {
+  opacity: 80%;
 }
 
 .back {
@@ -49,6 +57,7 @@
 
 .title {
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .break {
@@ -60,56 +69,93 @@
   font-size: 5rem;
 }
 
+.csport {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .chead {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   margin-left: 15rem;
   margin-right: 15rem;
 }
 
-.name {
-  margin-bottom: 1rem;
+.namel {
+  margin-right: 5rem;
 }
 
+.namer {
+  margin-left: 5rem;
+}
+
+
 .description {
-  position: relative;
+  margin-top: 1rem;
+}
+
+.image {
+  max-height: 30vh;
+  max-width: 30vh;
 }
 
 .math {
-  height: 30rem;
+  max-height: 50vh;
+  max-width: 50vh;
 }
 
 .one {
   background-image: url("https://www.wfla.com/wp-content/uploads/sites/71/2021/03/BASKETBALL-PREMIUM-GETTY-IMAGE.jpg?strip=1");
+  text-align: right;
 }
 
 .two {
   background-image: url("https://ca-times.brightspotcdn.com/dims4/default/86efb5f/2147483647/strip/true/crop/800x450+0+43/resize/1200x675!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe3%2Fe0%2F375ee4d44410b49b70c3c0a76713%2Fsoccer-ball.jpg");
+  text-align: left;
 }
 
 .three {
   background-image: url("https://thumbs.dreamstime.com/b/american-football-ball-green-grass-field-background-football-ball-d-illustration-american-football-ball-grass-field-118627562.jpg");
+  text-align: right;
 }
 
 .four {
   background-image: url("https://www.futurity.org/wp/wp-content/uploads/2018/06/frisbee-in-the-sky_1600.jpg");
+  text-align: left;
 }
 
 .five {
-  background-image: url("https://towsontalisman.com/wp-content/uploads/2019/02/track_and_field2-900x509.jpg");
+  background-image: url("https://images.unsplash.com/photo-1474546652694-a33dd8161d66?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
+  text-align: left;
 }
 
 .six {
   background-image: url("https://media.kare11.com/assets/KARE/images/1d6dcb63-4f67-439d-aaca-7705d6d77078/1d6dcb63-4f67-439d-aaca-7705d6d77078_750x422.jpeg");
+  text-align: right;
 }
 
 .seven {
   background-image: url("https://dailygazette.com/wp-content/uploads/2021/06/Tennis-4.jpg");
+  text-align: left;
 }
 
 .eight {
   background-image: url("https://thehill.com/sites/default/files/ca_volleyball_92820istock.jpg");
+  text-align: right;
 }
 
 .nine {
   background-image: url("https://www.liveabout.com/thmb/hIzHaB_MVwL2Ry_OtlFsEp7RW7c=/3000x1687/smart/filters:no_upscale()/RioOlympicsswimmingpool-GettyImages-519838356-59c09963054ad90011cf5247.jpg");
+  text-align: left;
+}
+
+.ten {
+  background-image: url("https://cdn.pixabay.com/photo/2021/03/02/19/26/badminton-6063629_1280.jpg");
+  text-align: right;
+}
+
+.eleven {
+  background-image: url("https://wp.dailybruin.com/images/2020/09/resize.web_.sp_.spikeball.ET_.jpg");
+  text-align: left;
 }

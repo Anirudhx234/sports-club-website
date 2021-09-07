@@ -18,21 +18,17 @@
   border: 0.2rem solid gray;
 }
 
-.image {
-  max-width: 25rem;
-  max-height: 25rem;
+.picture {
+  max-width: 20rem;
   border: 0.2rem solid gray;
 }
 
 .description {
-  margin-right: 0rem;
-  margin-left: 0rem;
   max-width: 30rem;
 }
 
 .line {
   border-top: 0.2rem solid #bbb;
-  border-radius: 0.2rem;
   align-self: center;
   width: 80%;
   margin-top: 1.5rem;
